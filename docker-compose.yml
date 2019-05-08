@@ -1,0 +1,45 @@
+version: '3.1'
+
+services:
+
+  wordpress:
+    image: wordpress:5.1.1
+    ports:
+      - 8888:80
+    environment:
+      - WORDPRESS_DEBUG=1
+      - WORDPRESS_DB_PASSWORD=wordpress
+    volumes:
+      - ./:/var/www/html/wp-content/plugins/wp-granular-demo:rw
+    links:
+      - mysql
+      - adminer
+
+  mysql:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=wordpress
+    volumes:
+      - mysql:/var/lib/mysql
+
+  adminer:
+    image: javanile/adminer
+    environment:
+      - MYSQL_ROOT_PASSWORD=wordpress
+    ports:
+      - 8889:8080
+
+  composer:
+    image: composer
+    user: 1000:1000
+    volumes:
+      - ./:/app
+
+  phpunit:
+    image: phpunit/phpunit:6.5.3
+    user: 1000:1000
+    volumes:
+      - ./:/app
+
+volumes:
+  mysql:

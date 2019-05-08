@@ -1,0 +1,16 @@
+{
+  "name": "wp-quality/guten-break-container",
+  "version": "0.0.1",
+  "autoload": {
+    "psr-4": {
+      "WpQuality\\GutenBreakContainer\\": "src/",
+      "WpQuality\\GutenBreakContainer\\Tests\\": "test/"
+    }
+  },
+  "require": {
+    "javanile/granular": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.5.3"
+  }
+}
