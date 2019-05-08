@@ -1,5 +1,5 @@
 /**
- * BLOCK: my-block
+ * BLOCK: credits
  *
  * Registering a basic block with Gutenberg.
  * Simple block, renders and saves the same content without any interactivity.
@@ -13,7 +13,7 @@ const { __ } = wp.i18n; // Import __() from wp.i18n
 const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.blocks
 
 /**
- * Register: aa Gutenberg Block.
+ * Register: Gutenberg Block.
  *
  * Registers a new block provided a unique name and an object defining its
  * behavior. Once registered, the block is made editor as an option to any
@@ -26,10 +26,9 @@ const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.b
  *                             registered; otherwise `undefined`.
  */
 registerBlockType( 'cgb/block-my-block', {
-	// Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
-	title: __( 'my-block - CGB Block' ), // Block title.
-	icon: 'shield', // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
-	category: 'common', // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
+	title: __( 'my-block - CGB Block' ),
+	icon: 'shield',
+	category: 'common',
 	keywords: [
 		__( 'my-block — CGB Block' ),
 		__( 'CGB Example' ),

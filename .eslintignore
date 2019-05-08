@@ -5,5 +5,6 @@
 build
 coverage
 cypress
+dist
 node_modules
 vendor

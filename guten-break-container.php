@@ -11,12 +11,9 @@ Version: 0.0.1
 Author URI: https://github.com/wp-quality
 */
 
-if ( ! defined( 'ABSPATH' ) ) {
-    exit;
-}
+defined('ABSPATH') or exit;
 
 require_once __DIR__.'/vendor/autoload.php';
-require_once plugin_dir_path( __FILE__ ) . 'src/init.php';
 
 use WpQuality\GutenBreakContainer\App;
 

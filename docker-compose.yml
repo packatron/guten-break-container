@@ -10,7 +10,7 @@ services:
       - WORDPRESS_DEBUG=1
       - WORDPRESS_DB_PASSWORD=wordpress
     volumes:
-      - ./:/var/www/html/wp-content/plugins/wp-granular-demo:rw
+      - ./:/var/www/html/wp-content/plugins/guten-break-container:rw
     links:
       - mysql
       - adminer
